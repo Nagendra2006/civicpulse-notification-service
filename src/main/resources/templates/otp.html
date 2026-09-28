@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .container {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        .otp {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>OTP Verification</h2>
+
+        <p>Hello,</p>
+
+        <p>Your OTP is:</p>
+
+        <p class="otp" th:text="${otp}">123456</p>
+
+        <p>This OTP is valid for 5 minutes.</p>
+
+        <p>Thank you.</p>
+    </div>
+
+</body>
+
+</html>

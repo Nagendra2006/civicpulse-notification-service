@@ -85,8 +85,9 @@ pipeline {
                     echo "Scanning NotificationService Docker image..."
 
                     trivy image \
-                      --severity HIGH,CRITICAL \
-                      civicpulse-notification-service:${BUILD_NUMBER}
+                    --timeout 15m \
+                    --severity HIGH,CRITICAL \
+                    civicpulse-notification-service:${BUILD_NUMBER}
                 '''
             }
         }
